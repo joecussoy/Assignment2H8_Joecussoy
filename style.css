@@ -1,0 +1,16 @@
+div{
+    padding: 5px;
+    background-color: white;
+    /* margin: 10px; */
+}
+
+
+#image{
+    border-radius: 50%;
+    float: left;
+    padding: 10px;
+}
+
+#button{
+    width: 100%;
+}

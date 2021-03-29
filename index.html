@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment2</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+<body class="bg-light">
+    <section>
+        <div class="navbar navbar-expand-lg navbar-light">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"></li><a class="nav-link" href="index.html">HOME</a></li>
+                <li class="nav-item"></li><a class="nav-link" href="index.html">PRODUCT</a></li>
+                <li class="nav-item"></li><a class="nav-link" href="index.html">GALERY</a></li>
+                <li class="nav-item"></li><a class="nav-link" href="index.html">BLOG</a></li>
+                <li class="nav-item"></li><a class="nav-link" href="index.html">INVENTORY</a></li>
+            </ul>
+        </div>
+    </section>
+    <br>
+    
+
+    <section id="docSection">
+        <div class="form-group container">
+            <div class="row">
+                <div class="col-sm">
+                    <img id="image" src="gambar.jpg" width="100px" height="100px">
+                    <h3 id="showname">Nama Anda</h3>
+                    <p id="showrole">Front End Programmer</p>
+                    <button onclick="docs()" class="btn btn-primary">Edit</button>
+                    <button class="btn btn-outline-secondary disabled">Resume</button>
+                </div>
+                <div id="table" class="col-sm">
+                    <table>
+                        <tr>
+                            <td><b>Availability</b></td>
+                            <td id="showstatus">Full time</td>
+                        </tr>
+                        <tr>
+                            <td><b>Usia</b></td>
+                            <td id="showage">19</td>
+                        </tr>
+                        <tr>
+                            <td><b>Lokasi</b></td>
+                            <td id="showloc">Jakarta</td>
+                        </tr>
+                        <tr>
+                            <td><b>Pengalaman</b></td>
+                            <td id="showexp">2 tahun</td>
+                        </tr>
+                        <tr>
+                            <td><b>Email</b></td>
+                            <td id="showmail">Email@email.com</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    
+    <section id="formSection">
+        <div class="form-group container">
+            <div class="row">
+                <div class="col-sm">
+                <form>
+                <label> Nama :</label>
+                <input id=name class="form-control form-control-sm"><br>
+                <label> Role :</label>
+                <input id=role class="form-control form-control-sm"><br>
+                <label> Availability :</label>
+                <input id=jobstatus class="form-control form-control-sm"><br>
+                <label> Usia :</label>
+                <input id=age class="form-control form-control-sm"><br>
+                <label> Lokasi :</label>
+                <input id="loc" class="form-control form-control-sm"><br>
+                <label> Years Experience :</label>
+                <input id="exp" class="form-control form-control-sm"><br>
+                <label> Email :</label>
+                <input id="mail" class="form-control form-control-sm"><br>
+                </form>
+                <button id="button" onclick="simpanForm()" class="btn btn-success">SUBMIT</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function simpanForm(){
+            let nama = document.getElementById("name").value
+            document.getElementById("showname").innerHTML = nama
+
+            let posisi = document.getElementById("role").value
+            document.getElementById("showrole").innerHTML = posisi
+
+            let status = document.getElementById("jobstatus").value
+            document.getElementById("showstatus").innerHTML = status
+
+            let umur = document.getElementById("age").value
+            document.getElementById("showage").innerHTML = umur
+
+            let lokasi = document.getElementById("loc").value
+            document.getElementById("showloc").innerHTML = lokasi
+
+            let pngalaman = document.getElementById("exp").value
+            document.getElementById("showexp").innerHTML = pngalaman
+
+            let surei = document.getElementById("mail").value
+            document.getElementById("showmail").innerHTML = surei
+
+            docs()
+        }
+
+        function docs(){
+            let tampilan = document.getElementById("docSection")
+            if (tampilan.style.display === "none") {
+                tampilan.style.display = "block"
+            } else {
+                tampilan.style.display = "none"
+            }
+            form()
+        }
+
+        function form(){
+            let berkas = document.getElementById("formSection")
+            if (berkas.style.display === "none") {
+                berkas.style.display = "block"
+            } else {
+                berkas.style.display = "none"
+            }
+        }
+        form()
+    </script>
+</body>
+</html>
